@@ -18,10 +18,10 @@ test('test runCallback ', () => {
     runCallback(func)
     // 回调是否被调用
     expect(func).toBeCalled()
-    // console.log(func.mock)
+    console.log(func.mock)
     // 回调调用几次
     expect(func.mock.calls.length).toBe(1)
-    expect(func.mock.result[0].value).toBe(123)
+    expect(func.mock.results[0].value).toBe("data")
     expect(func.mock.calls[0]).toEqual(['abc'])
 })
 
